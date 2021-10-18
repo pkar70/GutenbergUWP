@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="GutenbergUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gutenberg"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+
+    <Grid Margin="5,5,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" MaxWidth="150"/>
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Text="Źródło:" VerticalAlignment="Center" Margin="0,0,5,0" />
+        <ComboBox Grid.Row="0" Grid.Column="1" x:Name="uiZrodlo" Margin="0,2,5,2"/>
+
+        <TextBox Grid.Row="1" Grid.Column="0" x:Name="uiSearchTerm" Margin="0,3,0,3"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="uiStatus" VerticalAlignment="Center" Margin="10,0,0,0"/>
+
+        <ListBox Grid.Row="2" Grid.Column="0" x:Name="uiListTerms" ScrollViewer.VerticalScrollBarVisibility="Visible" VerticalAlignment="Stretch" />
+        <WebView Grid.Row="2" Grid.Column="1" x:Name="uiWebView" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+    </Grid>
+</Page>
