@@ -155,6 +155,8 @@
     <Content Include="Dane\latin2pol.idx.txt" />
     <Content Include="Dane\pol2ang.idx.txt" />
     <None Include="GutenbergUWP_TemporaryKey.pfx" />
+    <None Include="$(MSBuildThisFileDirectory)_changes.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_tudus.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dane\ang2pol.htm" />
